@@ -1,13 +1,11 @@
-while True:
-    notaA = float(input("Digite a primeira nota: "))
-    if notaA < 0 or notaA > 10:
-        print("A nota deve está entre 10 e 0 digite novamente!!!")
-    else:
-        break
-while True:
-    notaB = float(input("Digite a segunda nota: "))
-    if notaB < 0 or notaB > 10:
-        print("A nota deve está entre 10 e 0 digite novamente!!!")
-    else:
-        break
+def verificar_nota(nota):
+    while nota < 0 or nota >10:
+        print("A nota deve estar entre 0 e 10")
+        nota = float(input("Digite a nota novamente: "))
+    return nota
+notaA = float(input("Digite a primeira nota: "))
+notaA = verificar_nota(notaA)
+
+notaB = float(input("Digite a segunda nota: "))
+notaB = verificar_nota(notaB)
 print(f"A média para o aulo que tirou {notaA} e {notaB} foi de {(notaA+ notaB) / 2}")
