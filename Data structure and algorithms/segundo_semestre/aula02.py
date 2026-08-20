@@ -22,3 +22,20 @@ def selection_sort(lista):
 
 print(bubble_sort(numeros))
 print(selection_sort(numeros))
+
+def insertion_sort(lista):
+    for i in range(1, len(lista)):
+        atual = lista[i]
+        j = i - 1
+        while j >= 0 and lista[j] > atual:
+            lista[j + 1] = lista[j]
+            j -= 1
+        lista[j + 1] = atual
+    return lista
+
+print("bubble_sort:")
+print(bubble_sort(numeros))
+print("selection_sort:")
+print(selection_sort(numeros))
+print("insertion_sort:")
+print(insertion_sort(numeros))
